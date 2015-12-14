@@ -15,7 +15,7 @@ module.exports = function(grunt) {
                 plugins: [
                     new UglifyJsPlugin()
                 ],
-                devtool: 'source-map'
+                devtool: 'hidden-source-map'
             }
         }
     });
