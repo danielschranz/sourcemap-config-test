@@ -14,7 +14,8 @@ module.exports = function(grunt) {
                 },
                 plugins: [
                     new UglifyJsPlugin()
-                ]
+                ],
+                devtool: 'source-map'
             }
         }
     });
