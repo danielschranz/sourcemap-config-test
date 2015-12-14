@@ -1,4 +1,7 @@
 module.exports = function(grunt) {
+
+    var UglifyJsPlugin = require('webpack/lib/optimize/UglifyJsPlugin');
+
     // Project configuration.
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -8,7 +11,10 @@ module.exports = function(grunt) {
                 output: {
                     path: "target/js",
                     filename: "app.js"
-                }
+                },
+                plugins: [
+                    new UglifyJsPlugin()
+                ]
             }
         }
     });
